@@ -1,7 +1,7 @@
 # Sound-Meter
-Sound-meter is an android application that measures sound level in decibel<br/>
+This is a modification of the original repository. I'm removing the speedometer and focusing more on the acoustics side. 
 
-![image](https://github.com/jeff2900/Sound-Meter/blob/master/screenshots/sm_en.jpg)<br>
-<br/>
+
+
 Based on halibobo's project
 https://github.com/halibobo/SoundMeter<br/>
