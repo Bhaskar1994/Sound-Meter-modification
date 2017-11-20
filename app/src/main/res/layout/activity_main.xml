@@ -10,16 +10,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
-        <com.bodekjan.soundmeter.Speedometer
-            android:id="@+id/speed"
-            android:layout_centerInParent="true"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
-            android:background="@drawable/noise_disc"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp" />
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:layout_width="48dp"
@@ -33,16 +24,6 @@
 
         <ImageButton
             android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:id="@+id/refreshbutton"
-            android:layout_gravity="left|top"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/refresh"
-            android:background="@android:color/transparent"
-            android:layout_marginLeft="16dp" />
-
-        <ImageButton
-            android:layout_width="48dp"
             android:layout_height="54dp"
             android:id="@+id/eggbutton"
             android:layout_gravity="left|bottom"
@@ -52,6 +33,17 @@
             android:layout_marginBottom="16dp"
 			android:visibility="gone"
             android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/refreshbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/refresh" />
+
     </FrameLayout>
 
     <LinearLayout
@@ -157,16 +149,18 @@
 
     <RelativeLayout
         android:id="@+id/chartcontainer"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="128dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:layout_weight="398">
+
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chart1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginRight="16dp" />
     </RelativeLayout>
 
 </LinearLayout>

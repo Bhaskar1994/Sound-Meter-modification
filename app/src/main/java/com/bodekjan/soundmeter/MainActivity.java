@@ -42,10 +42,11 @@ import java.util.Date;
 public class MainActivity extends Activity {
     ArrayList<Entry> yVals;
     boolean refreshed=false;
-    Speedometer speedometer;
+//    Speedometer speedometer;
     public static Typeface tf;
     ImageButton infoButton;
     ImageButton refreshButton;
+
     LineChart mChart;
     TextView minVal;
     TextView maxVal;
@@ -73,7 +74,7 @@ public class MainActivity extends Activity {
                     initChart();
                     return;
                 }
-                speedometer.refresh();
+//                speedometer.refresh();
                 minVal.setText(df1.format(World.minDB));
                 mmVal.setText(df1.format((World.minDB+World.maxDB)/2));
                 maxVal.setText(df1.format(World.maxDB));
@@ -140,7 +141,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        speedometer=(Speedometer)findViewById(R.id.speed);
+        //speedometer=(Speedometer)findViewById(R.id.speed);
         mRecorder = new MyMediaRecorder();
     }
 
@@ -180,14 +181,14 @@ public class MainActivity extends Activity {
             // enable touch gestures
             mChart.setTouchEnabled(true);
             // enable scaling and dragging
-            mChart.setDragEnabled(false);
+            mChart.setDragEnabled(true);
             mChart.setScaleEnabled(true);
             // if disabled, scaling can be done on x- and y-axis separately
-            mChart.setPinchZoom(false);
+            mChart.setPinchZoom(true);
             mChart.setDrawGridBackground(false);
             //mChart.setMaxHighlightDistance(400);
             XAxis x = mChart.getXAxis();
-            x.setLabelCount(8, false);
+            x.setLabelCount(10, false);
             x.setEnabled(true);
             x.setTypeface(tf);
             x.setTextColor(Color.GREEN);
